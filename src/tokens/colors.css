@@ -1,0 +1,65 @@
+:root,
+[data-mofi-theme='light'] {
+  /* Primitive colors: use through semantic aliases in product UI. */
+  --mofi-color-teal-900: #0a3a38;
+  --mofi-color-teal-800: #0e4644;
+  --mofi-color-teal-700: #115553;
+  --mofi-color-teal-600: #1c6e6b;
+  --mofi-color-teal-500: #2a8784;
+  --mofi-color-teal-400: #5ba9a6;
+  --mofi-color-teal-300: #8fc9c6;
+  --mofi-color-teal-200: #c0e0dd;
+  --mofi-color-teal-100: #e3f1ef;
+  --mofi-color-teal-50: #f0f8f7;
+
+  --mofi-color-pink-700: #a56383;
+  --mofi-color-pink-600: #c079a0;
+  --mofi-color-pink-500: #d28ead;
+  --mofi-color-pink-400: #e0a4c0;
+  --mofi-color-pink-300: #efbdd5;
+  --mofi-color-pink-200: #f4ccdf;
+  --mofi-color-pink-100: #f8dee8;
+  --mofi-color-pink-50: #fceff4;
+
+  --mofi-color-mint-700: #5ab5a2;
+  --mofi-color-mint-600: #79ccba;
+  --mofi-color-mint-500: #a5dccf;
+  --mofi-color-mint-400: #c5e8de;
+  --mofi-color-mint-300: #d7efe8;
+  --mofi-color-mint-200: #e7fef8;
+  --mofi-color-mint-100: #f1fefb;
+  --mofi-color-mint-50: #f8fffe;
+
+  --mofi-color-gray-950: #0a0a0a;
+  --mofi-color-gray-900: #171717;
+  --mofi-color-gray-800: #262626;
+  --mofi-color-gray-700: #3f3f3f;
+  --mofi-color-gray-600: #525252;
+  --mofi-color-gray-500: #737373;
+  --mofi-color-gray-400: #a3a3a3;
+  --mofi-color-gray-300: #d4d4d4;
+  --mofi-color-gray-200: #e5e5e5;
+  --mofi-color-gray-100: #f5f5f5;
+  --mofi-color-gray-50: #fafafa;
+  --mofi-color-base-white: #ffffff;
+
+  --mofi-color-state-success-base: #15803d;
+  --mofi-color-state-warning-base: #b45309;
+  --mofi-color-state-destructive-base: #db5461;
+  --mofi-color-state-destructive-hover: #c14a55;
+  --mofi-color-state-info-base: #1d4ed8;
+
+  /* Semantic colors: use these in components and product UI. */
+  --mofi-color-action-primary: var(--mofi-color-teal-700);
+  --mofi-color-action-secondary: var(--mofi-color-pink-300);
+  --mofi-color-action-tertiary: var(--mofi-color-mint-200);
+  --mofi-color-text-foreground: var(--mofi-color-gray-950);
+  --mofi-color-surface-muted: var(--mofi-color-gray-100);
+  --mofi-color-surface-background: var(--mofi-color-gray-50);
+  --mofi-color-surface-card: var(--mofi-color-base-white);
+  --mofi-color-border-default: var(--mofi-color-gray-200);
+  --mofi-color-state-success: var(--mofi-color-state-success-base);
+  --mofi-color-state-warning: var(--mofi-color-state-warning-base);
+  --mofi-color-state-destructive: var(--mofi-color-state-destructive-base);
+  --mofi-color-state-info: var(--mofi-color-state-info-base);
+}

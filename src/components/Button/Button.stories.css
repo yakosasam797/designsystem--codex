@@ -1,0 +1,24 @@
+.button-matrix {
+  align-items: center;
+  display: grid;
+  gap: 20px 24px;
+  grid-template-columns: 110px repeat(4, minmax(120px, 1fr));
+  min-width: 720px;
+}
+
+.button-matrix > strong {
+  color: var(--mofi-color-gray-600);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.button-matrix__row {
+  align-items: center;
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+}
+
+.button-matrix__row > strong {
+  text-transform: capitalize;
+}

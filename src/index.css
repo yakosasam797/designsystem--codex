@@ -1,0 +1,21 @@
+@import './tokens/colors.css';
+
+:root {
+  color: var(--mofi-color-text-foreground);
+  background: var(--mofi-color-surface-background);
+  font-family: 'Public Sans', Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button, input, textarea, select { font: inherit; }

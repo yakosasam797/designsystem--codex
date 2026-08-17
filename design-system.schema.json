@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["name", "version", "themeModes", "entrypoint", "figma", "foundations", "components"],
+  "properties": {
+    "name": { "type": "string" },
+    "version": { "type": "string" },
+    "themeModes": { "type": "array", "items": { "type": "string" } },
+    "entrypoint": { "type": "string" },
+    "figma": { "type": "object" },
+    "foundations": { "type": "object" },
+    "components": { "type": "object" }
+  }
+}
