@@ -1,1 +1,1 @@
-export * from './colorMetadata'
+export * from './tokenMetadata'

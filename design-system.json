@@ -1,35 +1,34 @@
 {
   "$schema": "./design-system.schema.json",
-  "name": "Mofi",
-  "version": "0.1.0",
+  "name": "ParyatechOS",
+  "version": "1.0.0",
   "themeModes": ["light"],
   "entrypoint": "src/index.ts",
-  "figma": {
-    "fileKey": "VTqZIKqYuZ3o90hgC4Wi7C",
-    "colorDocumentationNodeId": "50:2",
-    "primitiveCollectionId": "VariableCollectionId:56:2",
-    "semanticCollectionId": "VariableCollectionId:56:40",
-    "buttonComponentSetNodeId": "71:228",
-    "buttonComponentSetKey": "7023d9b09986e43589dd610768b46541a6cd357e",
-    "published": false,
-    "codeConnect": "blocked-by-plan-and-publication"
+  "source": {
+    "name": "Paryatech Design System.dc.html",
+    "type": "approved-html-specification"
   },
   "foundations": {
-    "colors": {
-      "css": "src/tokens/colors.css",
-      "metadata": "src/tokens/colorMetadata.ts",
-      "stories": "src/foundations/Colors/Colors.stories.tsx"
-    }
+    "tokens": "src/tokens/colors.css",
+    "metadata": "src/tokens/tokenMetadata.ts",
+    "stories": "src/foundations/Foundations.stories.tsx",
+    "fonts": ["Onest", "Public Sans", "JetBrains Mono"]
   },
   "components": {
-    "Button": {
-      "implementation": "src/components/Button/Button.tsx",
-      "metadata": "src/components/Button/buttonMetadata.ts",
-      "stories": "src/components/Button/Button.stories.tsx",
-      "variants": ["primary", "secondary", "outline", "ghost", "destructive", "link"],
-      "sizes": ["default", "sm"],
-      "figmaStates": ["default", "hover", "focus"],
-      "codeStates": ["default", "hover", "focus", "disabled", "loading"]
-    }
+    "metadata": "src/components/componentMetadata.ts",
+    "implementation": "src/components/components.tsx",
+    "styles": "src/components/components.css",
+    "stories": [
+      "src/components/Primitives.stories.tsx",
+      "src/components/FormsNavigation.stories.tsx",
+      "src/components/DataDisplay.stories.tsx",
+      "src/components/Overlays.stories.tsx"
+    ],
+    "public": [
+      "Button", "IconButton", "StatusBadge", "KindBadge", "CountBadge", "ReadinessChip", "Avatar",
+      "Input", "Select", "SearchField", "Checkbox", "SegmentedControl", "Tabs", "Breadcrumbs", "Pagination",
+      "Toolbar", "DataTable", "SummaryPanel", "EmptyState", "LoadingState", "Modal", "Menu", "PriceCell",
+      "RateCardTable", "DataPair"
+    ]
   }
 }
