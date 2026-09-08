@@ -1,9 +1,25 @@
 # Design-system decisions
 
-## DS-001 — Destructive button label contrast
+## DS-001 — HTML specification is the visual source
 
 - Status: accepted
-- Figma source: Button component set `71:228`
-- Decision: keep the approved destructive fill `#DB5461`, but use `text/foreground` for the resting label. On hover, the darker `#C14A55` fill uses white.
-- Reason: white on the resting fill measures 3.85:1, below WCAG AA's 4.5:1 requirement for 14px text. Storybook's axe test enforces this contract.
-- Follow-up: update the Figma destructive variants when the component library can be edited and published.
+- Decision: the supplied ParyatechOS HTML specification replaces the previous starter tokens and Button set.
+- Reason: it defines the complete visual language and operational patterns requested for the platform.
+
+## DS-002 — Flat operational rate cards
+
+- Status: accepted
+- Decision: `RateCardTable` renders one visible row per product or priced combination. Price components remain visible columns.
+- Reason: important accommodation and visa facts must not be hidden inside a row dropdown.
+
+## DS-003 — Named price outcomes
+
+- Status: accepted
+- Decision: a price cell is one of `entered`, `included`, `complimentary`, `on-request`, `not-offered` or `missing`.
+- Reason: zero, unavailable and unknown are operationally different and must not collapse into a blank cell.
+
+## DS-004 — Installed icon and font assets
+
+- Status: accepted
+- Decision: use Lucide React for the source's rounded outline icon style and bundle Onest, Public Sans and JetBrains Mono with Fontsource.
+- Reason: avoids handcrafted approximations and keeps Storybook faithful without external font requests.

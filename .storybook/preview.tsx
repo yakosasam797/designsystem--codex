@@ -11,7 +11,7 @@ const preview: Preview = {
     },
     backgrounds: {
       options: {
-        app: { name: 'App', value: '#FAFAFA' },
+        app: { name: 'App', value: '#FDFFFC' },
         card: { name: 'Card', value: '#FFFFFF' },
       },
     },

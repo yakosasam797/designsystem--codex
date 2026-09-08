@@ -1,23 +1,24 @@
-# Agent guide: Mofi design system
+# Agent guide: ParyatechOS design system
 
-This repository is the code source of truth. Before generating UI, read `design-system.json`, then the metadata file for every token or component you use.
+This repository is the code source of truth. Before generating product UI, read `design-system.json` and `src/components/componentMetadata.ts`.
 
 ## Rules
 
 1. Import public APIs from `src/index.ts`.
-2. Use semantic color variables in product UI. Never replace a semantic token with a hex value.
-3. Do not invent dark-mode values. Figma currently defines only Light mode.
-4. Use `Button` for actions and an anchor for navigation. The `link` Button variant does not change HTML semantics.
-5. Preserve keyboard focus, disabled, loading, and accessible-name behavior.
-6. Add a Storybook story and metadata whenever a component API changes.
-7. Run `npm run check` and `npm run test-storybook` before handing work off.
+2. Use semantic `--pt-*` variables in components. Primitive tokens only define semantic aliases.
+3. The approved source defines Light mode only; do not invent dark values.
+4. Use `Button` for actions and anchors for navigation.
+5. Preserve keyboard focus, disabled, loading and accessible-name behavior.
+6. Add or update a Storybook story and component metadata whenever an API changes.
+7. Keep rate-card fields visible in a single row. Do not add row expanders to hide operational data.
+8. A blank price is missing, not zero or complimentary. Use a named `PriceCell` state.
+9. Run `npm run check` and `npm run test-storybook` before handoff.
 
-## Figma traceability
+## Source traceability
 
-- File key: `VTqZIKqYuZ3o90hgC4Wi7C`
-- Color documentation: `50:2`
-- Primitive collection: `VariableCollectionId:56:2`
-- Semantic collection: `VariableCollectionId:56:40`
-- Button component set: `71:228`
-
-Figma is currently unpublished and Code Connect cannot be activated on the connected plan. Do not describe the repo as live-connected until both conditions change.
+- Visual source: `Paryatech Design System.dc.html`
+- Implementation tokens: `src/tokens/colors.css`
+- Token metadata: `src/tokens/tokenMetadata.ts`
+- Component APIs: `src/components/components.tsx`
+- Component contracts: `src/components/componentMetadata.ts`
+- Runnable examples: `src/**/*.stories.tsx`

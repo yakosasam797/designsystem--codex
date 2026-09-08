@@ -1,6 +1,6 @@
-# Mofi design system
+# ParyatechOS design system
 
-The code source of truth for Mofi foundations and components. The initial release mirrors the Paryatech Figma file's color variables and Button component set, then documents implementation details, usage, states, and accessibility in Storybook.
+The production React implementation of the supplied `Paryatech Design System.dc.html` specification. It packages the exact light-theme tokens, typography, density, components, operational states and table patterns as reusable TypeScript APIs with Storybook documentation.
 
 ## Start
 
@@ -9,21 +9,34 @@ npm install
 npm run storybook
 ```
 
-Storybook runs at `http://localhost:6006`. Use `npm run build-storybook` for the static build and `npm run check` before review.
+Storybook runs on port `6006`. The catalogue app runs with `npm run dev`.
 
-## Sources of truth
+## Public API
 
-- CSS token values: `src/tokens/colors.css`
-- Token meaning and Figma source IDs: `src/tokens/colorMetadata.ts`
-- Component implementation: `src/components/Button/Button.tsx`
-- Component usage contract: `src/components/Button/buttonMetadata.ts`
-- Runnable examples and state matrix: `src/components/Button/Button.stories.tsx`
-- Machine-readable index: `design-system.json`
+Import components and metadata from the package entrypoint:
 
-Product code should import from `src/index.ts`. Components should consume semantic CSS variables such as `--mofi-color-action-primary`; primitive variables are reserved for defining semantics.
+```tsx
+import { Button, RateCardTable, StatusBadge } from '@paryatech/design-system'
+```
 
-## Figma status
+All product UI must consume semantic `--pt-*` tokens. Primitive color values exist only to define semantic aliases.
 
-Source file: `VTqZIKqYuZ3o90hgC4Wi7C`. The Button component set is node `71:228`, key `7023d9b09986e43589dd610768b46541a6cd357e`, and is currently unpublished. The Figma file exposes Light mode only, so this repo does not invent a dark theme.
+## Included
 
-Code Connect activation requires the Figma component to be published and an eligible Organization or Enterprise plan/seat. Until then, the IDs above preserve traceability without claiming a live mapping.
+- Three-tier light-theme token architecture
+- Onest, Public Sans and JetBrains Mono font assets bundled locally
+- Buttons, icon buttons, badges, chips, avatars and form controls
+- Segmented controls, tabs, breadcrumbs and pagination
+- Toolbars, selectable data tables, summary panels and operational states
+- Accessible modal and menu presentation patterns
+- Flat accommodation and visa rate-card tables with named non-price states
+
+## Operational contracts
+
+- Filled teal is the one required next action in a region.
+- Table rows are at least 56px high; six visible columns is the default budget.
+- Supporting values fold beneath primary values before a new column is added.
+- Blank pricing means missing, never free.
+- Rate-card products stay visible as complete rows; do not hide fee identity in row dropdowns.
+
+Run `npm run check` and `npm run test-storybook` before review.
