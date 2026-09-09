@@ -1,6 +1,8 @@
 # ParyatechOS design system
 
-The production React implementation of the supplied `Paryatech Design System.dc.html` specification. It packages the exact light-theme tokens, typography, density, components, operational states and table patterns as reusable TypeScript APIs with Storybook documentation.
+The production React implementation of the supplied `Paryatech Design System.dc.html` specification. It packages the approved tokens, typography, density, components, operational states and table patterns as reusable TypeScript APIs with Storybook documentation.
+
+The colour foundation mirrors the PRD Figma variable system with 89 reference colours, 84 semantic tokens, and Light/Dark modes. Use the paintbrush control in the Storybook toolbar to switch modes.
 
 ## Start
 
@@ -23,7 +25,7 @@ All product UI must consume semantic `--pt-*` tokens. Primitive color values exi
 
 ## Included
 
-- Three-tier light-theme token architecture
+- Three-tier Light/Dark colour-token architecture
 - Onest, Public Sans and JetBrains Mono font assets bundled locally
 - Buttons, icon buttons, badges, chips, avatars and form controls
 - Segmented controls, tabs, breadcrumbs and pagination

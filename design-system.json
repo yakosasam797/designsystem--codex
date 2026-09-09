@@ -2,11 +2,11 @@
   "$schema": "./design-system.schema.json",
   "name": "ParyatechOS",
   "version": "1.0.0",
-  "themeModes": ["light"],
+  "themeModes": ["light", "dark"],
   "entrypoint": "src/index.ts",
   "source": {
-    "name": "Paryatech Design System.dc.html",
-    "type": "approved-html-specification"
+    "name": "Paryatech Design System.dc.html + PRD Figma colour variables",
+    "type": "approved-design-system-sources"
   },
   "foundations": {
     "tokens": "src/tokens/colors.css",

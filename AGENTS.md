@@ -6,7 +6,7 @@ This repository is the code source of truth. Before generating product UI, read 
 
 1. Import public APIs from `src/index.ts`.
 2. Use semantic `--pt-*` variables in components. Primitive tokens only define semantic aliases.
-3. The approved source defines Light mode only; do not invent dark values.
+3. Colour semantics support Light and Dark modes. Use the Figma aliases documented in `src/tokens/tokenMetadata.ts`; never invent mode values inside components.
 4. Use `Button` for actions and anchors for navigation.
 5. Preserve keyboard focus, disabled, loading and accessible-name behavior.
 6. Add or update a Storybook story and component metadata whenever an API changes.
@@ -17,6 +17,7 @@ This repository is the code source of truth. Before generating product UI, read 
 ## Source traceability
 
 - Visual source: `Paryatech Design System.dc.html`
+- Colour source: PRD Figma file `2uayhHpYDyrue0XL4o2Zwt`
 - Implementation tokens: `src/tokens/colors.css`
 - Token metadata: `src/tokens/tokenMetadata.ts`
 - Component APIs: `src/components/components.tsx`
